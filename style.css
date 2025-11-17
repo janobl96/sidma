@@ -129,4 +129,33 @@ html,body{height:100%;margin:0;font-family:Inter, system-ui, -apple-system, 'Seg
   }
 }
 
+.machine-detail {
+  text-align: center;
+  padding: 40px 16px;
+}
+
+.machine-detail .machine-wrapper img {
+  max-width: 400px;
+  width: 90%;
+  height: auto;
+  border-radius: 12px;
+  margin-bottom: 24px;
+}
+
+.machine-params {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 24px;
+}
+
+.machine-params li {
+  font-size: 1.1rem;
+  margin: 8px 0;
+  color: var(--dark);
+}
+
+.machine-detail .btn {
+  margin-top: 12px;
+}
+
 
