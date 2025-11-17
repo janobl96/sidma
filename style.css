@@ -114,10 +114,23 @@ html,body{height:100%;margin:0;font-family:Inter, system-ui, -apple-system, 'Seg
   margin: 0 auto;
 }
 
-.meta,
-.meta a {
-  color: var(--dark);      /* tmavá farba textu */
-  text-decoration: none;   /* odstráni podčiarknutie */
+/* Pre stroje / vozový park karty */
+.card.machine {
+  display: block;         /* aby sa správalo ako blok */
+  color: var(--dark);     /* tmavý text */
+  text-decoration: none;  /* odstráni podčiarknutie */
+  transition: transform .18s, box-shadow .18s;
 }
 
+.card.machine:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 14px 40px rgba(12,12,12,0.08);
+}
+
+/* Nadpis a odstavce vnútri linku */
+.card.machine h3,
+.card.machine p {
+  color: var(--dark);     /* tmavá farba textu */
+  margin: 4px 0;
+}
 
