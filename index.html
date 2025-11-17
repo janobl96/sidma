@@ -1,45 +1,168 @@
 <!DOCTYPE html>
-</a>
-<a href="detail-stiepkovacka.html" class="karta">
-<img src="images/stiepkovacka.jpg">
-<h3>Štiepkovač</h3>
-</a>
-<a href="detail-vrtak.html" class="karta">
-<img src="images/vrtak.jpg">
-<h3>Zemný vrták</h3>
-</a>
-</div>
+<html lang="sk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SIDMA – Zemné práce & Prenájom strojov</title>
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="container nav-inner">
+    <div class="logo">SIDMA</div>
+    <button class="menu-toggle" id="menuToggle" aria-label="Otvoriť menu">☰</button>
+    <ul class="nav-links" id="navMenu">
+      <li><a href="#home">Domov</a></li>
+      <li><a href="#sluzby">Služby</a></li>
+      <li><a href="#vozovy-park">Vozový park</a></li>
+      <li><a href="#stroje">Prenájom strojov</a></li>
+      <li><a href="#galeria">Galéria</a></li>
+      <li><a href="#kontakt">Kontakt</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header id="home" class="hero">
+  <div class="hero-slider-wrap">
+    <div class="hero-slider" id="heroSlider">
+      <img src="https://images.unsplash.com/photo-1549448772-c28859187311?auto=format&fit=crop&w=1600&q=60" alt="Bager 1" class="slide">
+      <img src="https://images.unsplash.com/photo-1503389152951-9f343605f61e?auto=format&fit=crop&w=1600&q=60" alt="Bager 2" class="slide">
+      <img src="https://images.unsplash.com/photo-1590480956463-228741366904?auto=format&fit=crop&w=1600&q=60" alt="Valec" class="slide">
+      <img src="https://images.unsplash.com/photo-1591453089816-0fbb971b2d56?auto=format&fit=crop&w=1600&q=60" alt="Plošina" class="slide">
+    </div>
+    <div class="hero-overlay"></div>
+  </div>
+  <div class="hero-content">
+    <h1>SIDMA</h1>
+    <p class="lead">Profesionálne výkopové práce &amp; prenájom stavebných strojov</p>
+    <a href="#kontakt" class="btn primary">Nezáväzná cenová ponuka</a>
+  </div>
+</header>
+
+<main>
+<section id="sluzby" class="section container">
+  <h2>Služby</h2>
+  <p class="intro">Poskytujeme komplexné služby v oblasti zemných a výkopových prác, vrátane dopravy zeminy a likvidácie stavebného odpadu.</p>
+  <div class="grid">
+    <article class="card">
+      <h3>Výkopové práce</h3>
+      <p>Presné výkopy pre inžinierske siete, základy domov a terénne úpravy.</p>
+    </article>
+    <article class="card">
+      <h3>Odvoz zeminy</h3>
+      <p>Rýchly a spoľahlivý odvoz prebytočnej zeminy z vašej stavby.</p>
+    </article>
+    <article class="card">
+      <h3>Odvoz stavebného odpadu</h3>
+      <p>Profesionálna likvidácia a odvoz sutiny a stavebného odpadu s dôrazom na recykláciu.</p>
+    </article>
+  </div>
 </section>
 
-
-<!-- VOZOVÝ PARK -->
-<section class="stroje">
-<h2>Náš vozový park</h2>
-<div class="karty">
-<a href="detail-tatra.html" class="karta">
-<img src="images/tatra.jpg">
-<h3>TATRA 815</h3>
-</a>
-<a href="detail-transporter.html" class="karta">
-<img src="images/transporter.jpg">
-<h3>Transporter</h3>
-</a>
-</div>
+<section id="vozovy-park" class="section container">
+  <h2>Náš Vozový park</h2>
+  <p class="intro">Kvalitné stroje pripravené na prácu. Využívame ich pri našich projektoch.</p>
+  <div class="grid machines">
+    <a href="/vozidlo-bager-cat.html" class="card machine machine-link" data-name="Bager CAT 320">
+      <img src="https://images.unsplash.com/photo-1591453089816-0fbb971b2d56?auto=format&fit=crop&w=800&q=60" alt="Bager CAT 320">
+      <h3>Bager CAT 320</h3>
+      <p>Silný pásový bager pre náročné zemné práce.</p>
+      <p class="meta">Rok: 2022 • Hmotnosť: 22t</p>
+    </a>
+    <a href="/vozidlo-tatra-815.html" class="card machine machine-link" data-name="Sklápač TATRA 815">
+      <img src="https://images.unsplash.com/photo-1503389152951-9f343605f61e?auto=format&fit=crop&w=800&q=60" alt="Sklápač TATRA 815">
+      <h3>Sklápač TATRA 815</h3>
+      <p>Spoľahlivá doprava materiálu a zeminy v každom teréne.</p>
+      <p class="meta">Nosnosť: 18t • Pohon: 8x8</p>
+    </a>
+    <a href="/vozidlo-mini-bager.html" class="card machine machine-link" data-name="Mini bager Kubota">
+      <img src="https://images.unsplash.com/photo-1568605114967-8130f3a36994?auto=format&fit=crop&w=800&q=60" alt="Mini bager Kubota">
+      <h3>Mini bager Kubota</h3>
+      <p>Ideálny na úzke priestory a menšie výkopy.</p>
+      <p class="meta">Hmotnosť: 2t • Šírka: 1.2m</p>
+    </a>
+  </div>
 </section>
 
-
-<!-- GALÉRIA REALIZÁCIÍ -->
-<section class="galeria">
-<h2>Ukážky našich realizácií</h2>
-<div class="galeria-grid">
-<img src="images/real1.jpg">
-<img src="images/real2.jpg">
-<img src="images/real3.jpg">
-<img src="images/real4.jpg">
-</div>
+<section id="stroje" class="section container">
+  <h2>Prenájom strojov</h2>
+  <div class="grid machines">
+    <a href="/stroj-platforma.html" class="card machine machine-link" data-name="Plošina">
+      <img src="https://images.unsplash.com/photo-1591453089816-0fbb971b2d56?auto=format&fit=crop&w=800&q=60" alt="Plošina">
+      <h3>Plošina</h3>
+      <p>Bezpečná práca vo výškach, vhodná pre montáže a údržbu.</p>
+      <p class="meta">Cena: dohodou • Doprava: 0.70 €/km</p>
+    </a>
+    <a href="/stroj-dumper.html" class="card machine machine-link" data-name="Dumper">
+      <img src="https://images.unsplash.com/photo-1568605114967-8130f3a36994?auto=format&fit=crop&w=800&q=60" alt="Dumper">
+      <h3>Dumper</h3>
+      <p>Efektívny presun materiálu priamo na stavenisku.</p>
+      <p class="meta">Cena: 35 €/hod • Nosnosť: 1000 kg</p>
+    </a>
+    <a href="/stroj-stepkovacka.html" class="card machine machine-link" data-name="Štiepkovačka">
+      <img src="https://images.unsplash.com/photo-1503389152951-9f343605f61e?auto=format&fit=crop&w=800&q=60" alt="Štiepkovačka">
+      <h3>Štiepkovačka</h3>
+      <p>Ideálna na spracovanie drevného odpadu a znižovanie objemu odpadu.</p>
+      <p class="meta">Cena: 30 €/hod</p>
+    </a>
+    <a href="/stroj-vrtak.html" class="card machine machine-link" data-name="Zemný vrták">
+      <img src="https://images.unsplash.com/photo-1581093458791-9d6c62f3d9ab?auto=format&fit=crop&w=800&q=60" alt="Zemný vrták">
+      <h3>Zemný vrták</h3>
+      <p>Rýchle a presné vŕtanie pre stĺpiky, ploty a piloty.</p>
+      <p class="meta">Cena: 25 €/hod</p>
+    </a>
+  </div>
 </section>
 
+<section id="galeria" class="section container">
+  <h2>Galéria</h2>
+  <div class="gallery" id="gallery">
+    <figure><img src="https://images.unsplash.com/photo-1591453089816-0fbb971b2d56?auto=format&fit=crop&w=900&q=60" alt=""><figcaption>Výkop základov – pred/po</figcaption></figure>
+    <figure><img src="https://images.unsplash.com/photo-1503389152951-9f343605f61e?auto=format&fit=crop&w=900&q=60" alt=""><figcaption>Práca s dumperom</figcaption></figure>
+    <figure><img src="https://images.unsplash.com/photo-1568605114967-8130f3a36994?auto=format&fit=crop&w=900&q=60" alt=""><figcaption>Štiepkovačka v akcii</figcaption></figure>
+    <figure><img src="https://images.unsplash.com/photo-1581093458791-9d6c62f3d9ab?auto=format&fit:crop&w=900&q=60" alt=""><figcaption>Zemný vrták pri montáži plotu</figcaption></figure>
+  </div>
+</section>
 
-<script src="script.js"></script>
+<section id="kontakt" class="section container">
+  <h2>Kontakt</h2>
+  <div class="contact-grid">
+    <div class="contact-box">
+      <p><strong>Telefón:</strong> <a href="tel:+421900000000">+421 900 000 000</a></p>
+      <p><strong>Email:</strong> <a href="mailto:info@sidma.sk">info@sidma.sk</a></p>
+      <p><strong>Adresa:</strong> Bratislava / Slovensko (doprava po dohode)</p>
+      <p><strong>Prevádzka:</strong> Po–Pia 7:00–17:00</p>
+      <a class="btn" href="tel:+421900000000">Zavolať</a>
+    </div>
+
+    <form class="contact-form" id="contactForm">
+      <label for="name">Meno</label>
+      <input id="name" name="name" required />
+      <label for="email">Email</label>
+      <input id="email" type="email" name="email" required />
+      <label for="message">Správa</label>
+      <textarea id="message" name="message" rows="6" required></textarea>
+      <button type="submit" class="btn primary">Odoslať</button>
+      <p class="form-note">Správa bude odoslaná na <strong>info@sidma.sk</strong> (demo).</p>
+    </form>
+  </div>
+</section>
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <p>© 2025 SIDMA – Zemné práce &amp; Prenájom strojov</p>
+    <p class="small">Vytvorené pre GitHub Pages • Jednoduché na nasadenie</p>
+  </div>
+</footer>
+
+<div id="lightbox" class="lightbox" aria-hidden="true" role="dialog">
+  <button class="lb-close" id="lbClose" aria-label="Zavrieť">×</button>
+  <img id="lbImage" src="" alt="">
+  <p id="lbCaption"></p>
+</div>
+
 </body>
 </html>
