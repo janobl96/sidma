@@ -114,4 +114,10 @@ html,body{height:100%;margin:0;font-family:Inter, system-ui, -apple-system, 'Seg
   margin: 0 auto;
 }
 
+.meta {
+  color: var(--dark);    /* alebo #111 */
+  font-size: 0.95rem;
+  text-decoration: none; /* odstráni podčiarknutie */
+}
+
 
