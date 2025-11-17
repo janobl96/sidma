@@ -1,3 +1,4 @@
+/* SIDMA – style.css */
 :root{
   --accent:#ffcc00;
   --dark:#1f1f1f;
@@ -8,22 +9,23 @@
   --gap:20px;
 }
 
-*{box-sizing:border-box;}
-html,body{height:100%;margin:0;font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; color:var(--dark); background:var(--bg); -webkit-font-smoothing:antialiased;}
-.container{max-width:var(--container);margin:0 auto;padding:0 16px;}
+*{box-sizing:border-box}
+html,body{height:100%;margin:0;font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; color:var(--dark); background:var(--bg); -webkit-font-smoothing:antialiased}
+
+.container{max-width:var(--container);margin:0 auto;padding:0 16px}
 
 /* NAVBAR */
 .navbar{
   background:#fff;
-  border-bottom-left-radius:16px;
-  border-bottom-right-radius:16px;
+  border-bottom-left-radius:18px;
+  border-bottom-right-radius:18px;
+  box-shadow:0 4px 10px rgba(0,0,0,0.06);
   position:sticky;
   top:0;
   z-index:60;
-  box-shadow:0 4px 12px rgba(0,0,0,0.05);
 }
-.nav-inner{display:flex;align-items:center;justify-content:space-between;padding:10px 0}
-.logo img{height:48px;}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;padding:12px 0}
+.logo img{height:40px}
 .menu-toggle{display:none;background:transparent;border:0;font-size:1.6rem;cursor:pointer}
 .nav-links{list-style:none;margin:0;padding:0;display:flex;gap:12px;align-items:center}
 .nav-links li a{display:inline-block;padding:8px 12px;text-decoration:none;color:var(--dark);border-radius:8px;transition:background .18s}
@@ -31,9 +33,10 @@ html,body{height:100%;margin:0;font-family:Inter, system-ui, -apple-system, 'Seg
 
 /* HERO */
 .hero{position:relative;height:60vh;display:flex;align-items:center;justify-content:center;color:white;overflow:hidden}
-.hero-slide{position:absolute;inset:0;background-size:cover;background-position:center;transition:opacity .8s ease-in-out;opacity:0;z-index:0;}
-.hero-slide.active{opacity:1;}
-.hero-overlay{position:absolute;inset:0;background:linear-gradient(180deg, rgba(0,0,0,0.45), rgba(0,0,0,0.45));z-index:1}
+.hero-slide{position:absolute;inset:0;opacity:0;z-index:0;transition:opacity .8s ease-in-out}
+.hero-slide.active{opacity:1}
+.hero-slide img{width:100%;height:100%;object-fit:cover;object-position:center}
+.hero-overlay{position:absolute;inset:0;background:linear-gradient(180deg, rgba(0,0,0,0.45), rgba(0,0,0,0.45)); z-index:1}
 .hero-content{position:relative;z-index:2;text-align:center;padding:0 16px}
 .hero h1{font-size:3rem;margin:0 0 8px;font-weight:800;letter-spacing:1px}
 .lead{font-size:1.125rem;margin-bottom:18px;color:rgba(255,255,255,0.95)}
@@ -49,11 +52,12 @@ html,body{height:100%;margin:0;font-family:Inter, system-ui, -apple-system, 'Seg
 
 /* GRID & CARDS */
 .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:var(--gap)}
-.card{background:#fff;padding:18px;border-radius:var(--radius);box-shadow:0 6px 20px rgba(12,12,12,0.04);transition:transform .18s, box-shadow .18s;text-align:center;}
+.card{background:#fff;padding:18px;border-radius:var(--radius);box-shadow:0 6px 20px rgba(12,12,12,0.04);transition:transform .18s, box-shadow .18s}
 .card:hover{transform:translateY(-6px);box-shadow:0 14px 40px rgba(12,12,12,0.08)}
-
-/* MACHINES IMAGES */
 .machine img{width:100%;height:160px;object-fit:cover;border-radius:8px;margin-bottom:10px}
+
+/* VOZOVY PARK / STROJE SECTION */
+.machine-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:var(--gap)}
 
 /* GALLERY */
 .gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px}
@@ -94,4 +98,5 @@ html,body{height:100%;margin:0;font-family:Inter, system-ui, -apple-system, 'Seg
   .hero{height:50vh}
   .hero h1{font-size:1.8rem}
   .gallery img{height:140px}
+  .hero-slide img{object-position:top center}
 }
