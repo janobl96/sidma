@@ -100,3 +100,15 @@ html,body{height:100%;margin:0;font-family:Inter, system-ui, -apple-system, 'Seg
   .gallery img{height:140px}
   .hero-slide img{object-position:top center}
 }
+
+.service-icon {
+  text-align: center;
+  margin: 12px 0;
+}
+
+.service-icon img {
+  width: 50px; /* veľkosť ikonky */
+  height: 50px;
+  object-fit: contain;
+}
+
