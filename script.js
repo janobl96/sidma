@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function(){
-  // Menu toggle
+  // MENU TOGGLE
   const menuToggle = document.getElementById('menuToggle');
   const navMenu = document.getElementById('navMenu');
   menuToggle.addEventListener('click', function(){
@@ -7,19 +7,19 @@ document.addEventListener('DOMContentLoaded', function(){
     menuToggle.setAttribute('aria-expanded', navMenu.classList.contains('open'));
   });
 
-  // Smooth scroll
+  // SMOOTH SCROLL
   document.querySelectorAll('a[href^="#"]').forEach(a => {
     a.addEventListener('click', function(e){
       const target = document.querySelector(this.getAttribute('href'));
       if(target){ 
         e.preventDefault(); 
         target.scrollIntoView({behavior:'smooth', block:'start'}); 
-        if(navMenu.classList.contains('open')) navMenu.classList.remove('open'); 
+        if(navMenu.classList.contains('open')) navMenu.classList.remove('open');
       }
     });
   });
 
-  // Contact form demo
+  // CONTACT FORM DEMO
   const form = document.getElementById('contactForm');
   if(form){
     form.addEventListener('submit', function(e){
@@ -33,13 +33,12 @@ document.addEventListener('DOMContentLoaded', function(){
     });
   }
 
-  // Gallery lightbox
+  // GALLERY LIGHTBOX
   const galleryImgs = document.querySelectorAll('#gallery img');
   const lightbox = document.getElementById('lightbox');
   const lbImage = document.getElementById('lbImage');
   const lbCaption = document.getElementById('lbCaption');
   const lbClose = document.getElementById('lbClose');
-
   galleryImgs.forEach(img => {
     img.addEventListener('click', () => {
       lbImage.src = img.src;
@@ -48,23 +47,21 @@ document.addEventListener('DOMContentLoaded', function(){
       lightbox.setAttribute('aria-hidden','false');
     });
   });
-
   function closeLB(){
     lightbox.classList.remove('lb-open');
     lightbox.setAttribute('aria-hidden','true');
     lbImage.src = '';
     lbCaption.textContent = '';
   }
-
   lbClose.addEventListener('click', closeLB);
   lightbox.addEventListener('click', (e)=>{ if(e.target === lightbox) closeLB(); });
 
-  // Hero slider
-  const slides = ['images/hero1.jpg','images/hero2.jpg','images/hero3.jpg'];
+  // HERO SLIDER
+  const slides = document.querySelectorAll('.hero-slide');
   let currentSlide = 0;
-  const hero = document.querySelector('.hero');
   setInterval(()=>{
-    currentSlide = (currentSlide+1) % slides.length;
-    hero.style.backgroundImage = `url(${slides[currentSlide]})`;
-  },5000);
+    slides.forEach(s => s.classList.remove('active'));
+    currentSlide = (currentSlide + 1) % slides.length;
+    slides[currentSlide].classList.add('active');
+  },5000); // každých 5s
 });
