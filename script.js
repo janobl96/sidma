@@ -57,13 +57,11 @@ document.addEventListener('DOMContentLoaded', function(){
   lightbox.addEventListener('click', (e)=>{ if(e.target === lightbox) closeLB(); });
 
   // HERO SLIDER
-  // HERO SLIDER
-const slides = document.querySelectorAll('.hero-slide');
-let currentSlide = 0;
-
-setInterval(() => {
-  slides.forEach(s => s.classList.remove('active'));
-  currentSlide = (currentSlide + 1) % slides.length;
-  slides[currentSlide].classList.add('active');
-}, 5000); // každých 5 sekúnd
+  const slides = document.querySelectorAll('.hero-slide');
+  let currentSlide = 0;
+  setInterval(()=>{
+    slides.forEach(s => s.classList.remove('active'));
+    currentSlide = (currentSlide + 1) % slides.length;
+    slides[currentSlide].classList.add('active');
+  },5000); // každých 5s
 });
