@@ -1,50 +1,53 @@
 <!DOCTYPE html>
 <html lang="sk">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Tatra – SIDMA</title>
-  <link rel="stylesheet" href="/style.css" />
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Tatra – SIDMA</title>
+<link rel="stylesheet" href="../style.css" />
+<script defer src="../script.js"></script>
 </head>
 <body>
 
+<!-- NAVBAR -->
 <nav class="navbar">
   <div class="container nav-inner">
     <div class="logo">
-      <img src="/images/logo.png" alt="SIDMA">
+      <img src="../images/logo.png" alt="SIDMA">
     </div>
-    <ul class="nav-links">
-      <li><a href="/index.html#home">Domov</a></li>
-      <li><a href="/index.html#sluzby">Služby</a></li>
-      <li><a href="/index.html#vozovy-park">Náš vozový park</a></li>
-      <li><a href="/index.html#stroje">Prenájom strojov</a></li>
-      <li><a href="/index.html#galeria">Galéria</a></li>
-      <li><a href="/index.html#kontakt">Kontakt</a></li>
+    <button class="menu-toggle" id="menuToggle" aria-label="Otvoriť menu">☰</button>
+    <ul class="nav-links" id="navMenu">
+      <li><a href="../index.html#home">Domov</a></li>
+      <li><a href="../index.html#sluzby">Služby</a></li>
+      <li><a href="../index.html#vozovy-park">Náš vozový park</a></li>
+      <li><a href="../index.html#stroje">Prenájom strojov</a></li>
+      <li><a href="../index.html#galeria">Galéria</a></li>
+      <li><a href="../index.html#kontakt">Kontakt</a></li>
     </ul>
   </div>
 </nav>
 
-<main>
-  <section class="machine-detail container">
-    <h2>Plošina</h2>
-    <div class="machine-wrapper">
-      <img src="/images/plošina.jpg" alt="Plošina">
-
-      <ul class="machine-params">
-        <li>Výška zdvihu: 12 m</li>
-        <li>Nosnosť: 250 kg</li>
-        <li>Prevádzka: elektrická</li>
-        <li>Cena: dohodou</li>
+<!-- DETAIL STROJA -->
+<main class="section container">
+  <h1>Dumper</h1>
+  <div class="grid">
+    <div class="card" style="grid-column:1/-1; text-align:center;">
+      <img src="../images/tatra.jpg" alt="tatra" style="max-width:400px;width:100%;height:auto;">
+      <p>Efektívny presun materiálu priamo na stavenisku.</p>
+      <ul style="text-align:left; max-width:400px; margin:12px auto 0;">
+        <li><strong>Cena:</strong> 35 €/hod</li>
+        <li><strong>Nosnosť:</strong> 1000 kg</li>
+        <li><strong>Rok výroby:</strong> 2020</li>
+        <li><strong>Doprava:</strong> 0,70 €/km</li>
       </ul>
-
-      <a href="/index.html#stroje" class="btn primary">Späť na stroje</a>
+      <a href="../index.html#stroje" class="btn primary" style="margin-top:16px;">Späť na stroje</a>
     </div>
-  </section>
+  </div>
 </main>
 
 <footer class="footer">
   <div class="container">
-    <p>© 2025 SIDMA – Zemné práce &amp; Prenájom strojov</p>
+    <p>© 2025 SIDMA – Zemné práce & Prenájom strojov</p>
   </div>
 </footer>
 
