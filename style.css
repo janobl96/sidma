@@ -100,13 +100,32 @@ html,body{height:100%;margin:0;font-family:Inter, system-ui, -apple-system, 'Seg
   .gallery img{height:140px}
   .hero-slide img{object-position:top center}
 }
+
 .service-icon {
   text-align: center;
   margin: 12px 0;
 }
 
 .service-icon img {
-  width: 50px; /* veľkosť ikonky */
-  height: 50px;
+  width: 25%;          /* dynamická veľkosť vzhľadom na rodiča */
+  max-width: 120px;    /* obmedzenie na desktop */
+  height: auto;        /* zachová proporcie */
   object-fit: contain;
+  display: block;
+  margin: 0 auto;
 }
+
+@media(max-width:900px){
+  .service-icon img {
+    width: 35%;        /* väčšie na tabletoch/mobiloch */
+    max-width: 100px;
+  }
+}
+
+@media(max-width:520px){
+  .service-icon img {
+    width: 40%;        /* ešte väčšie na malých telefónoch */
+    max-width: 80px;
+  }
+}
+
