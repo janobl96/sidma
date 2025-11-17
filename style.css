@@ -107,8 +107,10 @@ html,body{height:100%;margin:0;font-family:Inter, system-ui, -apple-system, 'Seg
 }
 
 .service-icon img {
-  width: 200px; /* veľkosť ikonky */
-  height: 200px;
-  object-fit: contain;
+  width: 200px;      /* nastavená šírka */
+  height: 200px;     /* nastavená výška */
+  object-fit: contain; /* zachová proporcie a nezdeformuje obrázok */
+  display: block;    /* odstráni inline gap */
+  margin: 0 auto;    /* vycentruje obrázok */
 }
 
