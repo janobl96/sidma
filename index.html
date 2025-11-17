@@ -1,14 +1,15 @@
 <!DOCTYPE html>
 <html lang="sk">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>SIDMA – Zemné práce & Prenájom strojov</title>
-  <link rel="stylesheet" href="style.css" />
-  <script defer src="script.js"></script>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>SIDMA – Zemné práce & Prenájom strojov</title>
+<link rel="stylesheet" href="style.css" />
+<script defer src="script.js"></script>
 </head>
 <body>
 
+<!-- NAVBAR -->
 <nav class="navbar">
   <div class="container nav-inner">
     <div class="logo">
@@ -26,7 +27,11 @@
   </div>
 </nav>
 
+<!-- HERO SLIDER -->
 <header id="home" class="hero">
+  <div class="hero-slide active" style="background-image:url('images/hero1.jpg');"></div>
+  <div class="hero-slide" style="background-image:url('images/hero2.jpg');"></div>
+  <div class="hero-slide" style="background-image:url('images/hero3.jpg');"></div>
   <div class="hero-overlay"></div>
   <div class="hero-content">
     <h1>SIDMA</h1>
@@ -36,6 +41,7 @@
 </header>
 
 <main>
+<!-- SLUZBY -->
 <section id="sluzby" class="section container">
   <h2>Služby</h2>
   <p class="intro">Poskytujeme komplexné služby v oblasti zemných a výkopových prác, vrátane dopravy zeminy a likvidácie stavebného odpadu.</p>
@@ -55,62 +61,72 @@
   </div>
 </section>
 
+<!-- VOZOVY PARK -->
 <section id="vozovy-park" class="section container">
   <h2>Náš vozový park</h2>
   <div class="grid machines">
-    <a href="stroje/tatra.html" class="card machine">
-      <img src="images/tatra.jpg" alt="Tatra">
-      <h3>Tatra</h3>
-      <p>Silný a spoľahlivý transportér materiálu na stavbe.</p>
+    <a href="stroje/auto1.html" class="card machine">
+      <img src="images/auto1.jpg" alt="Nákladné auto 1">
+      <h3>Nákladné auto 1</h3>
+      <p>Nosnosť: 1000 kg • Rok výroby: 2018</p>
     </a>
-    <a href="stroje/transporter.html" class="card machine">
-      <img src="images/transporter.jpg" alt="Transporter">
-      <h3>Transporter</h3>
-      <p>Efektívne presúvanie materiálu a strojov po stavbe.</p>
+    <a href="stroje/auto2.html" class="card machine">
+      <img src="images/auto2.jpg" alt="Nákladné auto 2">
+      <h3>Nákladné auto 2</h3>
+      <p>Nosnosť: 1500 kg • Rok výroby: 2020</p>
+    </a>
+    <a href="stroje/auto3.html" class="card machine">
+      <img src="images/auto3.jpg" alt="Nákladné auto 3">
+      <h3>Nákladné auto 3</h3>
+      <p>Nosnosť: 2000 kg • Rok výroby: 2019</p>
+    </a>
+    <a href="stroje/auto4.html" class="card machine">
+      <img src="images/auto4.jpg" alt="Nákladné auto 4">
+      <h3>Nákladné auto 4</h3>
+      <p>Nosnosť: 2500 kg • Rok výroby: 2021</p>
     </a>
   </div>
 </section>
 
+<!-- PRENAJOM STROJOV -->
 <section id="stroje" class="section container">
   <h2>Prenájom strojov</h2>
   <div class="grid machines">
     <a href="stroje/plosina.html" class="card machine">
       <img src="images/plosina.jpg" alt="Plošina">
       <h3>Plošina</h3>
-      <p>Bezpečná práca vo výškach, vhodná pre montáže a údržbu.</p>
-      <p class="meta">Cena: dohodou • Doprava: 0.70 €/km</p>
+      <p>Bezpečná práca vo výškach • Cena: dohodou</p>
     </a>
     <a href="stroje/dumper.html" class="card machine">
       <img src="images/dumper.jpg" alt="Dumper">
       <h3>Dumper</h3>
-      <p>Efektívny presun materiálu priamo na stavenisku.</p>
-      <p class="meta">Cena: 35 €/hod • Nosnosť: 1000 kg</p>
+      <p>Presun materiálu • Cena: 35 €/hod • Nosnosť: 1000 kg</p>
     </a>
     <a href="stroje/stiepkovacka.html" class="card machine">
       <img src="images/stiepkovacka.jpg" alt="Štiepkovačka">
       <h3>Štiepkovačka</h3>
-      <p>Ideálna na spracovanie drevného odpadu a znižovanie objemu odpadu.</p>
-      <p class="meta">Cena: 30 €/hod</p>
+      <p>Spracovanie drevného odpadu • Cena: 30 €/hod</p>
     </a>
     <a href="stroje/zemny-vrtak.html" class="card machine">
       <img src="images/zemny-vrtak.jpg" alt="Zemný vrták">
       <h3>Zemný vrták</h3>
-      <p>Rýchle a presné vŕtanie pre stĺpiky, ploty a piloty.</p>
-      <p class="meta">Cena: 25 €/hod</p>
+      <p>Rýchle a presné vŕtanie • Cena: 25 €/hod</p>
     </a>
   </div>
 </section>
 
+<!-- GALERIA -->
 <section id="galeria" class="section container">
   <h2>Galéria</h2>
   <div class="gallery" id="gallery">
-    <figure><img src="images/vykop1.jpg" alt=""><figcaption>Výkop základov – pred/po</figcaption></figure>
-    <figure><img src="images/dumper1.jpg" alt=""><figcaption>Práca s dumperom</figcaption></figure>
-    <figure><img src="images/stiepkovacka1.jpg" alt=""><figcaption>Štiepkovačka v akcii</figcaption></figure>
-    <figure><img src="images/zemny-vrtak1.jpg" alt=""><figcaption>Zemný vrták pri montáži plotu</figcaption></figure>
+    <figure><img src="images/hero1.jpg" alt=""><figcaption>Výkop základov – pred/po</figcaption></figure>
+    <figure><img src="images/dumper.jpg" alt=""><figcaption>Práca s dumperom</figcaption></figure>
+    <figure><img src="images/stiepkovacka.jpg" alt=""><figcaption>Štiepkovačka v akcii</figcaption></figure>
+    <figure><img src="images/zemny-vrtak.jpg" alt=""><figcaption>Zemný vrták pri montáži plotu</figcaption></figure>
   </div>
 </section>
 
+<!-- KONTAKT -->
 <section id="kontakt" class="section container">
   <h2>Kontakt</h2>
   <div class="contact-grid">
@@ -121,7 +137,6 @@
       <p><strong>Prevádzka:</strong> Po–Pia 7:00–17:00</p>
       <a class="btn" href="tel:+421900000000">Zavolať</a>
     </div>
-
     <form class="contact-form" id="contactForm">
       <label for="name">Meno</label>
       <input id="name" name="name" required />
@@ -138,12 +153,12 @@
 
 <footer class="footer">
   <div class="container">
-    <p>© 2025 SIDMA – Zemné práce &amp; Prenájom strojov</p>
+    <p>© 2025 SIDMA – Zemné práce & Prenájom strojov</p>
     <p class="small">Vytvorené pre GitHub Pages • Jednoduché na nasadenie</p>
   </div>
 </footer>
 
-<!-- Lightbox -->
+<!-- LIGHTBOX -->
 <div id="lightbox" class="lightbox" aria-hidden="true" role="dialog">
   <button class="lb-close" id="lbClose" aria-label="Zavrieť">×</button>
   <img id="lbImage" src="" alt="">
