@@ -1,74 +1,111 @@
 <!DOCTYPE html>
 <html lang="sk">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width,initial-scale=1" />
-<title>SIDMA – Zemné práce &amp; Prenájom strojov</title>
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SIDMA – Zemné práce & Prenájom strojov</title>
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
 </head>
 <body>
-<header class="navbar">
-  <div class="container">
-    <div class="logo"><img src="images/logo.png" alt="SIDMA logo" class="logo-img"></div>
-    <nav class="main-nav">
-      <a href="#sluzby">Služby</a>
-      <a href="#stroje">Prenájom</a>
-      <a href="#vozovy-park">Vozový park</a>
-      <a href="#galeria">Galéria</a>
-      <a href="#kontakt">Kontakt</a>
-    </nav>
+
+<nav class="navbar">
+  <div class="container nav-inner">
+    <div class="logo">SIDMA</div>
+    <button class="menu-toggle" id="menuToggle" aria-label="Otvoriť menu">☰</button>
+    <ul class="nav-links" id="navMenu">
+      <li><a href="#home">Domov</a></li>
+      <li><a href="#sluzby">Služby</a></li>
+      <li><a href="#vozovy-park">Náš vozový park</a></li>
+      <li><a href="#stroje">Prenájom strojov</a></li>
+      <li><a href="#galeria">Galéria</a></li>
+      <li><a href="#kontakt">Kontakt</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header id="home" class="hero">
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <h1>SIDMA</h1>
+    <p class="lead">Profesionálne výkopové práce &amp; prenájom stavebných strojov</p>
+    <a href="#kontakt" class="btn primary">Nezáväzná cenová ponuka</a>
   </div>
 </header>
-
-<section class="hero" id="home">
-  <div class="hero-carousel" id="heroCarousel" aria-hidden="false">
-    <div class="hero-slide"><img src="images/hero1.jpg" alt="Hero 1"></div>
-    <div class="hero-slide"><img src="images/hero2.jpg" alt="Hero 2"></div>
-    <div class="hero-slide"><img src="images/hero3.jpg" alt="Hero 3"></div>
-  </div>
-  <div class="hero-text">
-    <h1>Profesionálne výkopové práce &amp; prenájom stavebných strojov</h1>
-    <p>Rýchlo, spoľahlivo a za férové ceny.</p>
-    <a class="btn primary" href="#kontakt">Nezáväzná cenová ponuka</a>
-  </div>
-</section>
 
 <main>
 <section id="sluzby" class="section container">
   <h2>Služby</h2>
   <p class="intro">Poskytujeme komplexné služby v oblasti zemných a výkopových prác, vrátane dopravy zeminy a likvidácie stavebného odpadu.</p>
   <div class="grid">
-    <article class="card"><h3>Výkopové práce</h3><p>Presné výkopy pre inžinierske siete, základy domov a terénne úpravy.</p></article>
-    <article class="card"><h3>Odvoz zeminy</h3><p>Rýchly a spoľahlivý odvoz prebytočnej zeminy z vašej stavby.</p></article>
-    <article class="card"><h3>Odvoz stavebného odpadu</h3><p>Profesionálna likvidácia a odvoz sutiny a stavebného odpadu s dôrazom na recykláciu.</p></article>
-  </div>
-</section>
-
-<section id="stroje" class="section container">
-  <h2>Ponuka strojov na prenájom</h2>
-  <div class="machine-grid">
-    <a class="machine-card" href="detail-plosina.html"><img src="images/plosina.jpg" alt="Plošina"><h3>Plošina</h3><p class="meta">Cena: dohodou</p></a>
-    <a class="machine-card" href="detail-dumper.html"><img src="images/dumper.jpg" alt="Dumper"><h3>Dumper</h3><p class="meta">Cena: 35 €/hod</p></a>
-    <a class="machine-card" href="detail-stiepkovacka.html"><img src="images/stiepkovacka.jpg" alt="Štiepkovačka"><h3>Štiepkovačka</h3><p class="meta">Cena: 30 €/hod</p></a>
-    <a class="machine-card" href="detail-vrtak.html"><img src="images/vrtak.jpg" alt="Zemný vrták"><h3>Zemný vrták</h3><p class="meta">Cena: 25 €/hod</p></a>
+    <article class="card">
+      <h3>Výkopové práce</h3>
+      <p>Presné výkopy pre inžinierske siete, základy domov a terénne úpravy.</p>
+    </article>
+    <article class="card">
+      <h3>Odvoz zeminy</h3>
+      <p>Rýchly a spoľahlivý odvoz prebytočnej zeminy z vašej stavby.</p>
+    </article>
+    <article class="card">
+      <h3>Odvoz stavebného odpadu</h3>
+      <p>Profesionálna likvidácia a odvoz sutiny a stavebného odpadu s dôrazom na recykláciu.</p>
+    </article>
   </div>
 </section>
 
 <section id="vozovy-park" class="section container">
   <h2>Náš vozový park</h2>
-  <div class="machine-grid">
-    <a class="machine-card" href="detail-tatra.html"><img src="images/tatra.jpg" alt="Tatra"><h3>TATRA – sklápací nákladný automobil</h3><p class="meta">Nosnosť: 12 t</p></a>
-    <a class="machine-card" href="detail-transporter.html"><img src="images/transporter.jpg" alt="Transporter"><h3>VW Transporter</h3><p class="meta">Preprava materiálu</p></a>
+  <div class="grid machines">
+    <div class="card machine">
+      <img src="images/tatra.jpg" alt="Tatra">
+      <h3>Tatra</h3>
+      <p>Silný a spoľahlivý transportér materiálu na stavbe.</p>
+    </div>
+    <div class="card machine">
+      <img src="images/transporter.jpg" alt="Transporter">
+      <h3>Transporter</h3>
+      <p>Efektívne presúvanie materiálu a strojov po stavbe.</p>
+    </div>
+  </div>
+</section>
+
+<section id="stroje" class="section container">
+  <h2>Prenájom strojov</h2>
+  <div class="grid machines">
+    <div class="card machine">
+      <img src="images/plosina.jpg" alt="Plošina">
+      <h3>Plošina</h3>
+      <p>Bezpečná práca vo výškach, vhodná pre montáže a údržbu.</p>
+      <p class="meta">Cena: dohodou • Doprava: 0.70 €/km</p>
+    </div>
+    <div class="card machine">
+      <img src="images/dumper.jpg" alt="Dumper">
+      <h3>Dumper</h3>
+      <p>Efektívny presun materiálu priamo na stavenisku.</p>
+      <p class="meta">Cena: 35 €/hod • Nosnosť: 1000 kg</p>
+    </div>
+    <div class="card machine">
+      <img src="images/stiepkovacka.jpg" alt="Štiepkovačka">
+      <h3>Štiepkovačka</h3>
+      <p>Ideálna na spracovanie drevného odpadu a znižovanie objemu odpadu.</p>
+      <p class="meta">Cena: 30 €/hod</p>
+    </div>
+    <div class="card machine">
+      <img src="images/zemny-vrtak.jpg" alt="Zemný vrták">
+      <h3>Zemný vrták</h3>
+      <p>Rýchle a presné vŕtanie pre stĺpiky, ploty a piloty.</p>
+      <p class="meta">Cena: 25 €/hod</p>
+    </div>
   </div>
 </section>
 
 <section id="galeria" class="section container">
-  <h2>Galéria realizácií</h2>
+  <h2>Galéria</h2>
   <div class="gallery" id="gallery">
-    <figure><img src="images/realizacia1.jpg" alt="Realizácia 1"><figcaption>Výkop základov – pred/po</figcaption></figure>
-    <figure><img src="images/realizacia2.jpg" alt="Realizácia 2"><figcaption>Práca s dumperom</figcaption></figure>
-    <figure><img src="images/realizacia3.jpg" alt="Realizácia 3"><figcaption>Štiepkovačka v akcii</figcaption></figure>
-    <figure><img src="images/realizacia4.jpg" alt="Realizácia 4"><figcaption>Zemný vrták pri montáži plotu</figcaption></figure>
+    <figure><img src="images/vykop1.jpg" alt=""><figcaption>Výkop základov – pred/po</figcaption></figure>
+    <figure><img src="images/dumper1.jpg" alt=""><figcaption>Práca s dumperom</figcaption></figure>
+    <figure><img src="images/stiepkovacka1.jpg" alt=""><figcaption>Štiepkovačka v akcii</figcaption></figure>
+    <figure><img src="images/zemny-vrtak1.jpg" alt=""><figcaption>Zemný vrták pri montáži plotu</figcaption></figure>
   </div>
 </section>
 
@@ -111,6 +148,5 @@
   <p id="lbCaption"></p>
 </div>
 
-<script src="script.js"></script>
 </body>
 </html>
