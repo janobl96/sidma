@@ -32,41 +32,12 @@ html,body{height:100%;margin:0;font-family:Inter, system-ui, -apple-system, 'Seg
 .nav-links li a:hover{background:rgba(0,0,0,0.04)}
 
 /* HERO */
-.hero{
-  position:relative;
-  height:60vh;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  color:white;
-  overflow:hidden;
-}
-.hero-slide{
-  position:absolute;
-  inset:0;
-  opacity:0;
-  z-index:0;
-  transition:opacity .8s ease-in-out;
-}
+.hero{position:relative;height:60vh;display:flex;align-items:center;justify-content:center;color:white;overflow:hidden}
+.hero-slide{position:absolute;inset:0;opacity:0;z-index:0;transition:opacity .8s ease-in-out}
 .hero-slide.active{opacity:1}
-.hero-slide img{
-  width:100%;
-  height:100%;
-  object-fit:cover;
-  object-position:center center;
-}
-.hero-overlay{
-  position:absolute;
-  inset:0;
-  background:linear-gradient(180deg, rgba(0,0,0,0.45), rgba(0,0,0,0.45));
-  z-index:1;
-}
-.hero-content{
-  position:relative;
-  z-index:2;
-  text-align:center;
-  padding:0 16px;
-}
+.hero-slide img{width:100%;height:100%;object-fit:cover;object-position:center}
+.hero-overlay{position:absolute;inset:0;background:linear-gradient(180deg, rgba(0,0,0,0.45), rgba(0,0,0,0.45)); z-index:1}
+.hero-content{position:relative;z-index:2;text-align:center;padding:0 16px}
 .hero h1{font-size:3rem;margin:0 0 8px;font-weight:800;letter-spacing:1px}
 .lead{font-size:1.125rem;margin-bottom:18px;color:rgba(255,255,255,0.95)}
 
@@ -83,10 +54,41 @@ html,body{height:100%;margin:0;font-family:Inter, system-ui, -apple-system, 'Seg
 .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:var(--gap)}
 .card{background:#fff;padding:18px;border-radius:var(--radius);box-shadow:0 6px 20px rgba(12,12,12,0.04);transition:transform .18s, box-shadow .18s}
 .card:hover{transform:translateY(-6px);box-shadow:0 14px 40px rgba(12,12,12,0.08)}
-.machine img{width:100%;height:160px;object-fit:cover;border-radius:8px;margin-bottom:10px}
 
 /* VOZOVY PARK / STROJE SECTION */
 .machine-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:var(--gap)}
+.card.machine {
+  display: block;         /* aby sa správalo ako blok */
+  color: var(--dark);     /* tmavý text */
+  text-decoration: none;  /* odstráni podčiarknutie */
+  transition: transform .18s, box-shadow .18s;
+}
+.card.machine:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 14px 40px rgba(12,12,12,0.08);
+}
+.card.machine h3,
+.card.machine p {
+  color: var(--dark);     /* tmavá farba textu */
+  margin: 4px 0;
+}
+
+/* Obrázky strojov - plná šírka, zachovanie pomeru */
+.machine img {
+  width: 100%;
+  height: auto;           /* automatická výška podľa šírky */
+  aspect-ratio: 16/9;     /* fixný pomer na desktop */
+  object-fit: cover;       /* zachová pokrytie karty */
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+/* Mobilné zmeny obrázkov */
+@media(max-width:520px){
+  .machine img {
+    aspect-ratio: 4/3;      /* lepší pomer na úzkych obrazovkách */
+  }
+}
 
 /* GALLERY */
 .gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px}
@@ -116,21 +118,8 @@ html,body{height:100%;margin:0;font-family:Inter, system-ui, -apple-system, 'Seg
 @media(max-width:900px){
   .contact-grid{grid-template-columns:1fr}
   .hero h1{font-size:2.25rem}
-  .menu-toggle{display:block; z-index:70}
-  .nav-links{
-    position:fixed;
-    right:0;
-    top:0;
-    height:100vh;
-    width:260px;
-    background:#fff;
-    flex-direction:column;
-    padding:60px 18px;
-    transform:translateX(100%);
-    transition:transform .25s;
-    box-shadow:-6px 0 24px rgba(0,0,0,0.08);
-    z-index:65;
-  }
+  .menu-toggle{display:block}
+  .nav-links{position:fixed;right:0;top:0;height:100vh;width:260px;background:#fff;flex-direction:column;padding:60px 18px;transform:translateX(100%);transition:transform .25s;box-shadow:-6px 0 24px rgba(0,0,0,0.08)}
   .nav-links.open{transform:translateX(0)}
   .nav-links li{margin-bottom:8px}
   .gallery img{height:160px}
@@ -140,15 +129,19 @@ html,body{height:100%;margin:0;font-family:Inter, system-ui, -apple-system, 'Seg
   .hero{height:50vh}
   .hero h1{font-size:1.8rem}
   .gallery img{height:140px}
-  .hero-slide img{object-position:center center} /* teraz centrálne aj na mobil */
+  .hero-slide img{object-position:top center}
 }
 
-/* SERVICE ICONS */
-.service-icon{text-align:center;margin:15px 0}
-.service-icon img{width:100px; height:100px; object-fit:contain; display:block; margin:0 auto}
+/* Služby – malé ikony pod h3 */
+.service-icon {
+  text-align: center;
+  margin: 15px 0;
+}
 
-/* KARTY STROJOV/VOZOV */
-.card.machine{display:block;color:var(--dark);text-decoration:none;transition:transform .18s, box-shadow .18s}
-.card.machine:hover{transform:translateY(-6px);box-shadow:0 14px 40px rgba(12,12,12,0.08)}
-.card.machine h3,
-.card.machine p{color:var(--dark);margin:4px 0}
+.service-icon img {
+  width: 100px !important;
+  height: 100px !important;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto;
+}
