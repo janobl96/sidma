@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded', function(){
+  // Menu toggle
   const menuToggle = document.getElementById('menuToggle');
   const navMenu = document.getElementById('navMenu');
   menuToggle.addEventListener('click', function(){
@@ -6,6 +7,7 @@ document.addEventListener('DOMContentLoaded', function(){
     menuToggle.setAttribute('aria-expanded', navMenu.classList.contains('open'));
   });
 
+  // Smooth scroll
   document.querySelectorAll('a[href^="#"]').forEach(a => {
     a.addEventListener('click', function(e){
       const target = document.querySelector(this.getAttribute('href'));
@@ -17,6 +19,7 @@ document.addEventListener('DOMContentLoaded', function(){
     });
   });
 
+  // Contact form demo
   const form = document.getElementById('contactForm');
   if(form){
     form.addEventListener('submit', function(e){
@@ -30,6 +33,7 @@ document.addEventListener('DOMContentLoaded', function(){
     });
   }
 
+  // Gallery lightbox
   const galleryImgs = document.querySelectorAll('#gallery img');
   const lightbox = document.getElementById('lightbox');
   const lbImage = document.getElementById('lbImage');
@@ -51,6 +55,16 @@ document.addEventListener('DOMContentLoaded', function(){
     lbImage.src = '';
     lbCaption.textContent = '';
   }
+
   lbClose.addEventListener('click', closeLB);
   lightbox.addEventListener('click', (e)=>{ if(e.target === lightbox) closeLB(); });
+
+  // Hero slider
+  const slides = ['images/hero1.jpg','images/hero2.jpg','images/hero3.jpg'];
+  let currentSlide = 0;
+  const hero = document.querySelector('.hero');
+  setInterval(()=>{
+    currentSlide = (currentSlide+1) % slides.length;
+    hero.style.backgroundImage = `url(${slides[currentSlide]})`;
+  },5000);
 });
