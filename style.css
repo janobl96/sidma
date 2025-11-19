@@ -22,7 +22,7 @@ html,body{height:100%;margin:0;font-family:Inter, system-ui, -apple-system, 'Seg
   box-shadow:0 4px 10px rgba(0,0,0,0.06);
   position:sticky;
   top:0;
-  z-index:60;
+  z-index:100;
 }
 .nav-inner{display:flex;align-items:center;justify-content:space-between;padding:12px 0}
 .logo img{height:40px}
