@@ -182,7 +182,7 @@ html,body{height:100%;margin:0;font-family:Inter, system-ui, -apple-system, 'Seg
 /* Zníženie výšky medzi sekciami */
 .section {
     padding: 40px 0;   /* Menší padding pre sekcie */
-    margin-bottom: 30px; /* Zníženie medzery medzi sekciami */
+    margin-bottom: 10px; /* Zníženie medzery medzi sekciami */
 }
 
 /* Pre mobilné zariadenia – ešte menšia medzera */
