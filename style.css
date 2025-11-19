@@ -135,13 +135,13 @@ html,body{height:100%;margin:0;font-family:Inter, system-ui, -apple-system, 'Seg
   .nav-links{position:fixed;right:0;top:0;height:100vh;width:260px;background:#fff;flex-direction:column;padding:60px 18px;transform:translateX(100%);transition:transform .25s;box-shadow:-6px 0 24px rgba(0,0,0,0.08)}
   .nav-links.open{transform:translateX(0)}
   .nav-links li{margin-bottom:8px}
-  .gallery img{height:160px}
+  .gallery img{aspect-ratio: 4/3}
 }
 
 @media(max-width:520px){
   .hero{height:50vh}
   .hero h1{font-size:1.8rem}
-  .gallery img{height:140px}
+  .gallery img{aspect-ratio: 4/3}
   .hero-slide img{object-position:top center}
 }
 
@@ -177,10 +177,5 @@ html,body{height:100%;margin:0;font-family:Inter, system-ui, -apple-system, 'Seg
 .menu-toggle {
     color: #111 !important;
 }
-/* Mobilné zobrazenie */
-@media(max-width:520px){
-    .gallery img {
-        aspect-ratio: 4/3;   /* vyššia výška na úzkych obrazovkách */
-    }
-}
+
 
