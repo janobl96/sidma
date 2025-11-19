@@ -15,15 +15,18 @@ html,body{height:100%;margin:0;font-family:Inter, system-ui, -apple-system, 'Seg
 .container{max-width:var(--container);margin:0 auto;padding:0 16px}
 
 /* NAVBAR */
-.navbar{
-  background:#fff;
-  border-bottom-left-radius:18px;
-  border-bottom-right-radius:18px;
-  box-shadow:0 4px 10px rgba(0,0,0,0.06);
-  position:sticky;
-  top:0;
-  z-index:100;
+.navbar {
+    background: var(--accent);       /* farba menu */
+    border-radius: 20px;             /* veľké zaoblenie rohov */
+    box-shadow: 0 8px 20px rgba(0,0,0,0.25), /* väčší tieň pre 3D efekt */
+                inset 0 -2px 6px rgba(255,255,255,0.2); /* jemný vnútorný lesk */
+    padding: 12px 24px;
+    position: sticky;
+    top: 10px; /* trošku odsadené odhora pre efekt „plávajúceho menu“ */
+    z-index: 100;
+    transition: all 0.3s ease;
 }
+
 .nav-inner{display:flex;align-items:center;justify-content:space-between;padding:12px 0}
 .logo img{height:40px}
 .menu-toggle{display:none;background:transparent;border:0;font-size:1.6rem;cursor:pointer}
