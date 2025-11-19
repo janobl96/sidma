@@ -40,6 +40,18 @@ html,body{height:100%;margin:0;font-family:Inter, system-ui, -apple-system, 'Seg
 .hero-content{position:relative;z-index:2;text-align:center;padding:0 16px}
 .hero h1{font-size:3rem;margin:0 0 8px;font-weight:800;letter-spacing:1px}
 .lead{font-size:1.125rem;margin-bottom:18px;color:rgba(255,255,255,0.95)}
+/* HERO – plynulý prechod spodnej časti do pozadia */
+.hero-fade-bottom {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 140px; /* môžeš upraviť */
+    background: linear-gradient(to bottom, rgba(0,0,0,0) 0%, var(--bg) 100%);
+    z-index: 2;
+    pointer-events: none;
+}
+
 
 /* BUTTONS */
 .btn{display:inline-block;padding:10px 16px;border-radius:8px;text-decoration:none;border:0;cursor:pointer;background:#fff;color:var(--dark);font-weight:700}
@@ -145,23 +157,4 @@ html,body{height:100%;margin:0;font-family:Inter, system-ui, -apple-system, 'Seg
   display: block;
   margin: 0 auto;
 }
-/* ============================================
-   HERO – jemné zatmavené mäkké okraje
-============================================ */
-.hero::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  z-index: 3;
-  background: radial-gradient(
-    circle,
-    rgba(0,0,0,0) 45%,
-    rgba(0,0,0,0.55) 100%
-  );
-}
 
-/* jemný fade obrázkov pri prechodoch */
-.hero-slide img {
-  transition: opacity 1.4s ease-in-out;
-}
