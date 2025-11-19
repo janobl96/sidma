@@ -179,4 +179,18 @@ html,body{height:100%;margin:0;font-family:Inter, system-ui, -apple-system, 'Seg
     color: #111 !important;
 }
 
+/* Zníženie výšky medzi sekciami */
+.section {
+    padding: 40px 0;   /* Menší padding pre sekcie */
+    margin-bottom: 30px; /* Zníženie medzery medzi sekciami */
+}
+
+/* Pre mobilné zariadenia – ešte menšia medzera */
+@media(max-width:520px){
+    .section {
+        padding: 30px 0;  /* Množstvo priestoru na mobile */
+        margin-bottom: 20px; /* Menší medzera medzi sekciami */
+    }
+}
+
 
