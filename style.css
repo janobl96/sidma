@@ -1,203 +1,79 @@
-/* ====== GLOBÁLNE NASTAVENIA ====== */
-:root{
-  --accent:#ffcc00;
-  --dark:#1b1b1b;
-  --muted:#cccccc;
-  --bg:#171717;
-  --panel:#242424;
-  --radius:12px;
-  --container:1100px;
-  --gap:20px;
+/* ============================================
+   GLOBÁLNE POZADIE – PERFOROVANÝ PLECH
+============================================ */
+body {
+  background: #1a1a1a;
+  background-image:
+    radial-gradient(rgba(255,255,255,0.08) 1px, transparent 1px),
+    radial-gradient(rgba(255,255,255,0.06) 1px, transparent 1px);
+  background-size: 8px 8px, 12px 12px;
+  color: #fff;
 }
 
-*{box-sizing:border-box;margin:0;padding:0}
-body{
-  font-family:Inter,Segoe UI,Arial;
-  color:white;
-  background:
-      radial-gradient(circle at 2px 2px, #000 1px, transparent 0) 0 0/18px 18px,
-      #141414;
+/* ============================================
+   TOP BAR – Tienistý žltý pruh
+============================================ */
+header {
+  background: #fcca03;
+  padding: 15px 20px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 50;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.35);
 }
 
-/* ====== NAVBAR ====== */
-.navbar{
-  background:linear-gradient(180deg, #ffcc00, #d4a700);
-  padding:12px 0;
-  position:sticky;
-  top:0;
-  z-index:100;
-  box-shadow:0 3px 10px rgba(0,0,0,0.4);
-}
-.nav-inner{
-  max-width:var(--container);
-  margin:auto;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-}
-.logo img{
-  height:45px;
-  filter: drop-shadow(0 1px 3px rgba(0,0,0,0.6));
-}
-.nav-links{
-  display:flex;
-  list-style:none;
-  gap:14px;
-}
-.nav-links li a{
-  color:#222;
-  text-decoration:none;
-  font-weight:600;
-  padding:8px 12px;
-  border-radius:8px;
-  transition:0.2s;
-}
-.nav-links li a:hover{
-  background:rgba(255,255,255,0.4);
+/* ============================================
+   HERO SLIDER – Mäkké okraje obrázkov
+============================================ */
+.hero {
+  position: relative;
+  height: 75vh;
+  overflow: hidden;
 }
 
-.menu-toggle{
-  display:none;
-  font-size:1.9rem;
-  background:none;
-  border:0;
-  cursor:pointer;
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: radial-gradient(
+    circle,
+    rgba(0,0,0,0) 40%,
+    rgba(0,0,0,0.5) 85%
+  );
+  z-index: 5;
 }
 
-/* ====== HERO SLIDER S MÄKKÝMI OKRAJMI ====== */
-.hero{
-  position:relative;
-  height:60vh;
-  overflow:hidden;
-  border-bottom-left-radius:40px;
-  border-bottom-right-radius:40px;
+/* Slider obrázky */
+.hero img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+
+  /* Mäkký fade pri prechode */
+  opacity: 0;
+  transition: opacity 2s ease;
+  position: absolute;
+  inset: 0;
 }
 
-.hero-slide{
-  position:absolute;
-  inset:0;
-  opacity:0;
-  transition:opacity 1.4s ease-in-out;
-}
-.hero-slide.active{
-  opacity:1;
+.hero img.active {
+  opacity: 1;
 }
 
-.hero-slide img{
-  width:100%;
-  height:100%;
-  object-fit:cover;
-  object-position:center;
-  filter:brightness(0.75);
-}
-
-/* MÄKKÉ VRCHY + BOKY */
-.hero::before,
-.hero::after{
-  content:"";
-  position:absolute;
-  inset:0;
-  pointer-events:none;
-}
-
-.hero::before{
-  background:
-    linear-gradient(90deg,
-    rgba(23,23,23,1) 0%,
-    rgba(23,23,23,0) 20%,
-    rgba(23,23,23,0) 80%,
-    rgba(23,23,23,1) 100%);
-}
-
-.hero::after{
-  background:
-    linear-gradient(180deg,
-    rgba(23,23,23,0.9) 0%,
-    rgba(23,23,23,0) 40%);
-}
-
-.hero-content{
-  position:absolute;
-  bottom:60px;
-  width:100%;
-  text-align:center;
-  z-index:5;
-}
-.hero h1{
-  font-size:3rem;
-  text-shadow:0 4px 20px rgba(0,0,0,0.8);
-}
-.lead{
-  margin-top:8px;
-  font-size:1.2rem;
-  opacity:0.9;
-}
-.btn.primary{
-  margin-top:15px;
-  background:var(--accent);
-  color:#222;
-  padding:12px 22px;
-  border-radius:10px;
-  font-weight:700;
-  box-shadow:0 6px 20px rgba(0,0,0,0.4);
-}
-
-/* ====== KARTY STROJOV (NOVÝ ŠTÝL) ====== */
-.card.machine{
-  background:var(--panel);
-  border:1px solid #2e2e2e;
-  border-radius:var(--radius);
-  padding:14px;
-  text-decoration:none;
-  color:white;
-  transition:0.22s;
-}
-.card.machine:hover{
-  transform:translateY(-6px);
-  box-shadow:0 10px 30px rgba(0,0,0,0.5);
-}
-
-.card.machine img{
-  width:100%;
-  height:170px;
-  object-fit:cover;
-  border-radius:10px;
-  margin-bottom:10px;
-}
-
-/* ====== SEKCIE ====== */
-.section{
-  padding:55px 0;
-}
-.section h2{
-  margin-bottom:16px;
-  font-size:1.7rem;
-  font-weight:700;
-}
-
-/* ====== RESPONSIVE ====== */
-@media(max-width:900px){
-  .menu-toggle{display:block;color:#222}
-  .nav-links{
-    position:fixed;
-    right:0;
-    top:0;
-    height:100vh;
-    width:260px;
-    flex-direction:column;
-    background:#ffcc00;
-    padding:70px 20px;
-    transform:translateX(100%);
-    transition:0.25s;
-    box-shadow:-4px 0 20px rgba(0,0,0,0.5);
+/* ============================================
+   RESPONSIVE TWEAK – Telefony
+============================================ */
+@media (max-width: 768px) {
+  .hero {
+    height: 55vh;
   }
-  .nav-links.open{
-    transform:translateX(0);
-  }
-  .hero{
-    height:48vh;
-  }
-  .hero h1{
-    font-size:2.1rem;
+
+  /* Na mobile bude výrez viac orientovaný hore,
+     aby nebol obraz rozrezaný v strede */
+  .hero img {
+    object-position: top;
   }
 }
