@@ -177,16 +177,19 @@ html,body{height:100%;margin:0;font-family:Inter, system-ui, -apple-system, 'Seg
     color: #111 !important;
 }
 
-/* === PERFOROVANÝ PLECH POZADIE STRÁNKY === */
-body {
-    background-color: #1a1a1a; /* tmavý základ */
-    background-image:
-        radial-gradient(circle, rgba(255,255,255,0.06) 1px, rgba(0,0,0,0) 1px),
-        linear-gradient(rgba(255,255,255,0.015) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(255,255,255,0.015) 1px, transparent 1px);
-    background-size:
-        12px 12px,   /* dierky */
-        60px 60px,   /* jemné horizontálne linky */
-        60px 60px;   /* jemné vertikálne linky */
-    color: var(--dark);
+/* ============================================
+   CELÉ POZADIE – TMAVÝ PERFOROVANÝ PLECH
+============================================ */
+body, .section, .card, .contact-box, .contact-form, .gallery figure {
+  background-color: #1a1a1a; /* tmavé pozadie */
+  color: #fff;
 }
+
+body {
+  background-image:
+    radial-gradient(rgba(255,255,255,0.08) 1px, transparent 1px),
+    radial-gradient(rgba(255,255,255,0.06) 1px, transparent 1px);
+  background-size: 8px 8px, 12px 12px;
+  background-attachment: fixed;
+}
+
