@@ -11,16 +11,22 @@ body {
 }
 
 /* ============================================
-   TOP BAR – Tienistý žltý pruh
+   NAVBAR – ŽLTÝ TIEŇOVANÝ PRUH
 ============================================ */
-header {
-  background: #fcca03;
+.navbar {
+  background: #fcca03 !important;
   padding: 15px 20px;
   position: fixed;
   width: 100%;
   top: 0;
-  z-index: 50;
+  z-index: 60;
   box-shadow: 0 3px 10px rgba(0,0,0,0.35);
+  border-radius: 0 0 14px 14px;
+}
+
+/* odsun obsahu kvôli fixed navbaru */
+body {
+  padding-top: 90px;
 }
 
 /* ============================================
@@ -40,40 +46,39 @@ header {
   background: radial-gradient(
     circle,
     rgba(0,0,0,0) 40%,
-    rgba(0,0,0,0.5) 85%
+    rgba(0,0,0,0.6) 90%
   );
-  z-index: 5;
+  z-index: 4;
 }
 
-/* Slider obrázky */
-.hero img {
+.hero-slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 2s ease;
+}
+
+.hero-slide.active {
+  opacity: 1;
+}
+
+.hero-slide img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   object-position: center;
-
-  /* Mäkký fade pri prechode */
-  opacity: 0;
-  transition: opacity 2s ease;
-  position: absolute;
-  inset: 0;
-}
-
-.hero img.active {
-  opacity: 1;
+  display: block;
 }
 
 /* ============================================
-   RESPONSIVE TWEAK – Telefony
+   RESPONSIVE – TELEFÓNY
 ============================================ */
 @media (max-width: 768px) {
   .hero {
     height: 55vh;
   }
 
-  /* Na mobile bude výrez viac orientovaný hore,
-     aby nebol obraz rozrezaný v strede */
-  .hero img {
+  .hero-slide img {
     object-position: top;
   }
 }
