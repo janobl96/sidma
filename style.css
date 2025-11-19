@@ -46,7 +46,7 @@ html,body{height:100%;margin:0;font-family:Inter, system-ui, -apple-system, 'Seg
     bottom: 0;
     left: 0;
     width: 100%;
-    height: 140px; /* môžeš upraviť */
+    height: 50px; /* môžeš upraviť */
     background: linear-gradient(to bottom, rgba(0,0,0,0) 0%, var(--bg) 100%);
     z-index: 2;
     pointer-events: none;
