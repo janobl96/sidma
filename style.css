@@ -152,8 +152,8 @@ html,body{height:100%;margin:0;font-family:Inter, system-ui, -apple-system, 'Seg
 }
 
 .service-icon img {
-  width: 150px !important;
-  height: 150px !important;
+  width: 100px !important;
+  height: 100px !important;
   object-fit: contain;
   display: block;
   margin: 0 auto;
