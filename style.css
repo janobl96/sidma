@@ -62,7 +62,7 @@ html,body{height:100%;margin:0;font-family:Inter, system-ui, -apple-system, 'Seg
 /* SECTIONS */
 .section{padding:56px 0}
 .section h2{font-size:1.6rem;margin-bottom:6px}
-.section .intro{color:var(--muted);margin-bottom:18px}
+.section .intro{color:var(--muted);margin-bottom:10px}
 
 /* GRID & CARDS */
 .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:var(--gap)}
@@ -76,7 +76,16 @@ html,body{height:100%;margin:0;font-family:Inter, system-ui, -apple-system, 'Seg
   color: var(--dark);     /* tmavý text */
   text-decoration: none;  /* odstráni podčiarknutie */
   transition: transform .18s, box-shadow .18s;
+  min-height: 300px;      /* Zvýšenie výšky karty */
 }
+
+/* Zväčšenie výšky pre desktop */
+@media(min-width:900px) {
+  .card.machine {
+    min-height: 350px;   /* Väčšia výška karty pre desktop */
+  }
+}
+
 .card.machine:hover {
   transform: translateY(-6px);
   box-shadow: 0 14px 40px rgba(12,12,12,0.08);
@@ -92,7 +101,7 @@ html,body{height:100%;margin:0;font-family:Inter, system-ui, -apple-system, 'Seg
   width: 100%;
   height: auto;           /* automatická výška podľa šírky */
   aspect-ratio: 16/9;     /* fixný pomer na desktop */
-  object-fit: cover;       /* zachová pokrytie karty */
+  object-fit: cover;      /* zachová pokrytie karty */
   border-radius: 8px;
   margin-bottom: 10px;
 }
@@ -159,6 +168,7 @@ html,body{height:100%;margin:0;font-family:Inter, system-ui, -apple-system, 'Seg
   display: block;
   margin: 0 auto;
 }
+
 /* NAVBAR – žlté s jemným tieňom */
 .navbar {
     background: var(--accent); /* žltá z tvojich root premenných (#ffcc00) */
@@ -179,12 +189,6 @@ html,body{height:100%;margin:0;font-family:Inter, system-ui, -apple-system, 'Seg
     color: #111 !important;
 }
 
-/* Zníženie výšky medzi sekciami */
-.section {
-    padding: 40px 0;   /* Menší padding pre sekcie */
-    margin-bottom: 10px; /* Zníženie medzery medzi sekciami */
-}
-
 /* Pre mobilné zariadenia – ešte menšia medzera */
 @media(max-width:520px){
     .section {
@@ -192,5 +196,4 @@ html,body{height:100%;margin:0;font-family:Inter, system-ui, -apple-system, 'Seg
         margin-bottom: 20px; /* Menší medzera medzi sekciami */
     }
 }
-
 
